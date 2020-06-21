@@ -1,4 +1,5 @@
 import React from "react";
+import "./ImageCard.css";
 
 class ImageCard extends React.Component {
   constructor(props) {
@@ -23,11 +24,14 @@ class ImageCard extends React.Component {
     //   const {description , urls} = this.props.image;
     return (
       <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
-        <img
-          alt={this.props.image.description}
-          src={this.props.image.urls.regular}
-          ref={this.imageRef}
-        />
+        <a href="#">
+          <img
+            alt={this.props.image.description}
+            src={this.props.image.urls.regular}
+            ref={this.imageRef}
+            className="imageBoxes"
+          />
+        </a>
       </div>
     );
   }
